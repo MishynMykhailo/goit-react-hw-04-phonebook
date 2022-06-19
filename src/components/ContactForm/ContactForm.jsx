@@ -23,12 +23,9 @@ export const ContactForm = ({ onSubmit }) => {
 
   const handlerSumbit = e => {
     e.preventDefault();
+    reset();
     return onSubmit({ name, number });
   };
-
-  useEffect(() => {
-    reset();
-  }, [onSubmit]);
 
   const reset = () => {
     setName('');
